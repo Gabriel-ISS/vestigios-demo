@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://coa83jo3xvbjy"]
+
+[ext_resource type="Script" uid="uid://dcyxyb38qglms" path="res://scripts/item_collectible.gd" id="1_5l8kl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eulru"]
+
+[node name="Node2D" type="Node2D" unique_id=1387628902]
+script = ExtResource("1_5l8kl")
+
+[node name="SoverWorld" type="Sprite2D" parent="." unique_id=1566677912]
+
+[node name="SpriteGrande" type="Sprite2D" parent="." unique_id=1547893022]
+visible = false
+
+[node name="Area2D" type="Area2D" parent="." unique_id=289013073]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1826302165]
+shape = SubResource("CircleShape2D_eulru")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

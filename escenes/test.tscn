@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cn45pmp6kd1p0" path="res://escenes/character.tscn" id="1_aptbf"]
 [ext_resource type="Texture2D" uid="uid://d1d8qf7oqeix6" path="res://assets/bosque_ejemplo.jpg" id="1_up0mx"]
+[ext_resource type="Texture2D" uid="uid://nctflq24trqd" path="res://icon.svg" id="2_up0mx"]
+[ext_resource type="PackedScene" uid="uid://coa83jo3xvbjy" path="res://escenes/object_collectible.tscn" id="3_mt6uw"]
 
 [node name="Node2D" type="Node2D" unique_id=1716292392]
 
@@ -30,3 +32,7 @@ vertical_alignment = 1
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1748093407]
 position = Vector2(-1, 0)
 color = Color(0.02617561, 0.026175609, 0.026175609, 1)
+
+[node name="Node2D" parent="." unique_id=1387628902 instance=ExtResource("3_mt6uw")]
+position = Vector2(1205, 313)
+SoverWorld = ExtResource("2_up0mx")

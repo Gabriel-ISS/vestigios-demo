@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d1d8qf7oqeix6" path="res://assets/bosque_ejemplo.jpg" id="1_up0mx"]
 [ext_resource type="Texture2D" uid="uid://nctflq24trqd" path="res://icon.svg" id="2_up0mx"]
 [ext_resource type="PackedScene" uid="uid://coa83jo3xvbjy" path="res://escenes/object_collectible.tscn" id="3_mt6uw"]
+[ext_resource type="PackedScene" uid="uid://07phqson4qin" path="res://escenes/test_mapa.tscn" id="3_up0mx"]
 
 [node name="Node2D" type="Node2D" unique_id=1716292392]
 
@@ -12,8 +13,11 @@ position = Vector2(1208.75, 741.75)
 scale = Vector2(3.8341343, 3.1742425)
 texture = ExtResource("1_up0mx")
 
+[node name="SceneMock" parent="." unique_id=1446556375 instance=ExtResource("3_up0mx")]
+position = Vector2(1289, 508)
+
 [node name="CharacterBody2D" parent="." unique_id=837353184 node_paths=PackedStringArray("dead_screen") instance=ExtResource("1_aptbf")]
-position = Vector2(1291, 508)
+position = Vector2(1290, 508)
 dead_screen = NodePath("../CanvasLayer")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852219566]

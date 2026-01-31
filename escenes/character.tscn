@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cn45pmp6kd1p0"]
 
 [ext_resource type="Script" uid="uid://ctagh4owjd2tf" path="res://scripts/character.gd" id="1_0yahw"]
-[ext_resource type="Texture2D" uid="uid://nctflq24trqd" path="res://icon.svg" id="2_rweml"]
+[ext_resource type="Texture2D" uid="uid://dmvqm67youugm" path="res://assets/jugador_test.png" id="2_1xb88"]
 [ext_resource type="Texture2D" uid="uid://b2vh3ccq2dqvk" path="res://assets/luz1.webp" id="3_rweml"]
 [ext_resource type="Script" uid="uid://dghhba3d6p5wv" path="res://scripts/ligth_timer.gd" id="4_1xb88"]
 
@@ -15,7 +15,7 @@ shape = SubResource("CapsuleShape2D_25tws")
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1325103765]
-texture = ExtResource("2_rweml")
+texture = ExtResource("2_1xb88")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=42083914]
 

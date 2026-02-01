@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7v3o8br8i2km"
-path="res://.godot/imported/arriba_y_abajo.webp-7478e2c03bf53ce89f471d7d03ee9283.ctex"
+path="res://.godot/imported/arriba_y_abajo.webp-90b7c99b5d0f685ad3ff54a6e8e015a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/arriba_y_abajo.webp"
-dest_files=["res://.godot/imported/arriba_y_abajo.webp-7478e2c03bf53ce89f471d7d03ee9283.ctex"]
+source_file="res://pedro/assets/arriba_y_abajo.webp"
+dest_files=["res://.godot/imported/arriba_y_abajo.webp-90b7c99b5d0f685ad3ff54a6e8e015a1.ctex"]
 
 [params]
 

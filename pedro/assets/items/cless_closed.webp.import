@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7ocpjys63sjd"
-path="res://.godot/imported/cless_closed.webp-09865def0d9e214da746f7e5ed378b9b.ctex"
+path="res://.godot/imported/cless_closed.webp-05a6789b0c8fb2d15474d767656c1573.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/cless_closed.webp"
-dest_files=["res://.godot/imported/cless_closed.webp-09865def0d9e214da746f7e5ed378b9b.ctex"]
+source_file="res://pedro/assets/items/cless_closed.webp"
+dest_files=["res://.godot/imported/cless_closed.webp-05a6789b0c8fb2d15474d767656c1573.ctex"]
 
 [params]
 

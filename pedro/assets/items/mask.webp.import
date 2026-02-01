@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cveiseseo0nm2"
-path="res://.godot/imported/mask.webp-e52ae293f0f9c1d80b6df4a227de7e0b.ctex"
+path="res://.godot/imported/mask.webp-f32b9794438d9e9094ca330f72a6a345.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/mask.webp"
-dest_files=["res://.godot/imported/mask.webp-e52ae293f0f9c1d80b6df4a227de7e0b.ctex"]
+source_file="res://pedro/assets/items/mask.webp"
+dest_files=["res://.godot/imported/mask.webp-f32b9794438d9e9094ca330f72a6a345.ctex"]
 
 [params]
 

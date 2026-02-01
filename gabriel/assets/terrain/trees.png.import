@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1d8qf7oqeix6"
-path="res://.godot/imported/bosque_ejemplo.jpg-cfda85b69c7c68ff093a86a78089cec2.ctex"
+uid="uid://d3dhib6rmrrex"
+path="res://.godot/imported/trees.png-a730b44b5d68ed73f167f88ba14ec4d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pedro/assets/bosque_ejemplo.jpg"
-dest_files=["res://.godot/imported/bosque_ejemplo.jpg-cfda85b69c7c68ff093a86a78089cec2.ctex"]
+source_file="res://gabriel/assets/terrain/trees.png"
+dest_files=["res://.godot/imported/trees.png-a730b44b5d68ed73f167f88ba14ec4d2.ctex"]
 
 [params]
 

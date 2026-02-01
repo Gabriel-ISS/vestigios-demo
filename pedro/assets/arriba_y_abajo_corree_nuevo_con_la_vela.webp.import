@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vei0xeg1ghn8"
-path="res://.godot/imported/arriba_y_abajo_corree_nuevo_con_la_vela.webp-8664d22ac77a236fc33fd19d6675a700.ctex"
+path="res://.godot/imported/arriba_y_abajo_corree_nuevo_con_la_vela.webp-28bdcd1346bc25285e1febfbe3745dbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/arriba_y_abajo_corree_nuevo_con_la_vela.webp"
-dest_files=["res://.godot/imported/arriba_y_abajo_corree_nuevo_con_la_vela.webp-8664d22ac77a236fc33fd19d6675a700.ctex"]
+source_file="res://pedro/assets/arriba_y_abajo_corree_nuevo_con_la_vela.webp"
+dest_files=["res://.godot/imported/arriba_y_abajo_corree_nuevo_con_la_vela.webp-28bdcd1346bc25285e1febfbe3745dbb.ctex"]
 
 [params]
 

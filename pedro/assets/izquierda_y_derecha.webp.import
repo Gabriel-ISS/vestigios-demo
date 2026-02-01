@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsoixql3660pe"
-path="res://.godot/imported/izquierda_y_derecha.webp-57deb7871ae2a7aab8683c697d831f09.ctex"
+path="res://.godot/imported/izquierda_y_derecha.webp-2650c7b133304c688701f4ca283229e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/izquierda_y_derecha.webp"
-dest_files=["res://.godot/imported/izquierda_y_derecha.webp-57deb7871ae2a7aab8683c697d831f09.ctex"]
+source_file="res://pedro/assets/izquierda_y_derecha.webp"
+dest_files=["res://.godot/imported/izquierda_y_derecha.webp-2650c7b133304c688701f4ca283229e7.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkbd6ux11i3o1"
-path="res://.godot/imported/mask_fragment_1.webp-bcac3a40dac93165fabf25958250bed5.ctex"
+path="res://.godot/imported/mask_fragment_1.webp-85da6f8c791de2b1f170b414c9dd5115.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/mask_fragment_1.webp"
-dest_files=["res://.godot/imported/mask_fragment_1.webp-bcac3a40dac93165fabf25958250bed5.ctex"]
+source_file="res://pedro/assets/items/mask_fragment_1.webp"
+dest_files=["res://.godot/imported/mask_fragment_1.webp-85da6f8c791de2b1f170b414c9dd5115.ctex"]
 
 [params]
 

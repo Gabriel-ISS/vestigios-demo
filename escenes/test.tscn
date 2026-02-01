@@ -18,10 +18,10 @@ position = Vector2(1289, 508)
 
 [node name="CharacterBody2D" parent="." unique_id=837353184 instance=ExtResource("1_aptbf")]
 position = Vector2(1290, 508)
-offset_up = Vector2(25, -45)
-offset_down = Vector2(-15, 45)
-offset_left = Vector2(-25, -25)
-offset_right = Vector2(25, 25)
+offset_up = Vector2(25, -40)
+offset_down = Vector2(-25, -25)
+offset_left = Vector2(-5, -25)
+offset_right = Vector2(5, -5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852219566]
 visible = false

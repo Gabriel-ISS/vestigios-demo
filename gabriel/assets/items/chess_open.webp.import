@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b30quc7exb126"
-path="res://.godot/imported/tileset.png-b22cec587a31d7dca213575415c6a0ba.ctex"
+uid="uid://baiwe55u1rtea"
+path="res://.godot/imported/chess_open.webp-520d0e64824c6e433a3a789fc3bab4c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gabriel/assets/tileset.png"
-dest_files=["res://.godot/imported/tileset.png-b22cec587a31d7dca213575415c6a0ba.ctex"]
+source_file="res://gabriel/assets/items/chess_open.webp"
+dest_files=["res://.godot/imported/chess_open.webp-520d0e64824c6e433a3a789fc3bab4c8.ctex"]
 
 [params]
 

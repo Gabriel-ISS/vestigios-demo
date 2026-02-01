@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnhe5f3a416i5"]
 
-[ext_resource type="Texture2D" uid="uid://7ocpjys63sjd" path="res://gabriel/assets/cless1.webp" id="1_mypm1"]
-[ext_resource type="Texture2D" uid="uid://baiwe55u1rtea" path="res://gabriel/assets/chess2.webp" id="2_vh083"]
+[ext_resource type="Texture2D" uid="uid://7ocpjys63sjd" path="res://gabriel/assets/items/cless_closed.webp" id="1_mypm1"]
+[ext_resource type="Texture2D" uid="uid://baiwe55u1rtea" path="res://gabriel/assets/items/chess_open.webp" id="2_vh083"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq2y5"]
 atlas = ExtResource("1_mypm1")

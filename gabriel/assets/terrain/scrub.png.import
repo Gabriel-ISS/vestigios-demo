@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cveiseseo0nm2"
-path="res://.godot/imported/mask.webp-1f52f468254e3ed6183a5471a55c0280.ctex"
+uid="uid://dulx2r7efsd3y"
+path="res://.godot/imported/scrub.png-52ed9d57bec5290d45149f3a8e0a625f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gabriel/assets/mask.webp"
-dest_files=["res://.godot/imported/mask.webp-1f52f468254e3ed6183a5471a55c0280.ctex"]
+source_file="res://gabriel/assets/terrain/scrub.png"
+dest_files=["res://.godot/imported/scrub.png-52ed9d57bec5290d45149f3a8e0a625f.ctex"]
 
 [params]
 

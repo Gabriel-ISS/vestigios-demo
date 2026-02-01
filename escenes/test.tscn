@@ -2,11 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://cn45pmp6kd1p0" path="res://escenes/character.tscn" id="1_aptbf"]
 [ext_resource type="Texture2D" uid="uid://d1d8qf7oqeix6" path="res://assets/bosque_ejemplo.jpg" id="1_up0mx"]
-[ext_resource type="Texture2D" uid="uid://nctflq24trqd" path="res://icon.svg" id="2_up0mx"]
-[ext_resource type="PackedScene" uid="uid://coa83jo3xvbjy" path="res://escenes/object_collectible.tscn" id="3_mt6uw"]
-[ext_resource type="PackedScene" path="res://escenes/test_mapa.tscn" id="3_up0mx"]
+[ext_resource type="Script" uid="uid://c4507gsxx8wce" path="res://scripts/main_script.gd" id="1_vvoya"]
+[ext_resource type="PackedScene" uid="uid://coa83jo3xvbjy" path="res://escenes/collectible_object.tscn" id="3_mt6uw"]
+[ext_resource type="PackedScene" uid="uid://07phqson4qin" path="res://escenes/test_mapa.tscn" id="3_up0mx"]
+[ext_resource type="Texture2D" uid="uid://muj8w40weur2" path="res://tree.png" id="6_vvoya"]
+[ext_resource type="Texture2D" uid="uid://nctflq24trqd" path="res://icon.svg" id="7_08f6w"]
 
 [node name="Node2D" type="Node2D" unique_id=1716292392]
+script = ExtResource("1_vvoya")
 
 [node name="BosqueEjemplo" type="Sprite2D" parent="." unique_id=812742996]
 position = Vector2(1208.75, 741.75)
@@ -16,30 +19,24 @@ texture = ExtResource("1_up0mx")
 [node name="SceneMock" parent="." unique_id=1446556375 instance=ExtResource("3_up0mx")]
 position = Vector2(1289, 508)
 
-[node name="CharacterBody2D" parent="." unique_id=837353184 instance=ExtResource("1_aptbf")]
+[node name="Player" parent="." unique_id=837353184 instance=ExtResource("1_aptbf")]
 position = Vector2(1290, 508)
 offset_up = Vector2(25, -40)
 offset_down = Vector2(-25, -25)
 offset_left = Vector2(-5, -25)
 offset_right = Vector2(5, -5)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852219566]
-visible = false
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=560919136]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Has Muerto"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="TestObjetoColecionable" parent="." unique_id=1387628902 instance=ExtResource("3_mt6uw")]
+position = Vector2(1280, 0)
+item_id = "test"
+object_sprite = ExtResource("7_08f6w")
+modal_sprite = ExtResource("6_vvoya")
+modal_text = "Has recogido algo :)"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1748093407]
+visible = false
 position = Vector2(-1, 0)
 color = Color(0.02617564, 0.026175609, 0.02617556, 1)
 
-[node name="Node2D" parent="." unique_id=1387628902 instance=ExtResource("3_mt6uw")]
-position = Vector2(1205, 313)
-SoverWorld = ExtResource("2_up0mx")
+[connection signal="closed" from="TestObjetoColecionable" to="." method="_on_test_objeto_colecionable_closed"]
+[connection signal="picked" from="TestObjetoColecionable" to="." method="_on_test_objeto_colecionable_picked"]

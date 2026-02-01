@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://coa83jo3xvbjy"]
 
 [ext_resource type="Script" uid="uid://dcyxyb38qglms" path="res://scripts/item_collectible.gd" id="1_5l8kl"]
+[ext_resource type="PackedScene" uid="uid://c2p8b6u3q3tpk" path="res://escenes/modal.tscn" id="2_y8ob4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eulru"]
+radius = 64.0
 
-[node name="Node2D" type="Node2D" unique_id=1387628902]
+[node name="ObjetoColecionable" type="Node2D" unique_id=1387628902]
 script = ExtResource("1_5l8kl")
 
-[node name="SoverWorld" type="Sprite2D" parent="." unique_id=1566677912]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1566677912]
 
-[node name="SpriteGrande" type="Sprite2D" parent="." unique_id=1547893022]
+[node name="PickedModal" parent="." unique_id=323477314 instance=ExtResource("2_y8ob4")]
 visible = false
 
 [node name="Area2D" type="Area2D" parent="." unique_id=289013073]
@@ -17,4 +19,5 @@ visible = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1826302165]
 shape = SubResource("CircleShape2D_eulru")
 
+[connection signal="closed" from="PickedModal" to="." method="_on_picked_modal_closed"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -22,6 +22,14 @@ extends CharacterBody2D
 
 var last_direction := "up"
 
+@export var input_enabled: bool = true:
+	set(value):
+		input_enabled = value
+		velocity = Vector2.ZERO
+		set_physics_process(value)
+		set_process_input(value)
+		update_animation("idle")
+
 func _ready() -> void:
 	position = Vector2(250, 250)
 	update_animation("idle")

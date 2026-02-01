@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://dnhe5f3a416i5"]
 
-[ext_resource type="Texture2D" uid="uid://7ocpjys63sjd" path="res://gabriel/assets/items/cless_closed.webp" id="1_mypm1"]
-[ext_resource type="Texture2D" uid="uid://baiwe55u1rtea" path="res://gabriel/assets/items/chess_open.webp" id="2_vh083"]
+[ext_resource type="Script" uid="uid://d33caq51btsv3" path="res://gabriel/assets/scenes/objects/chess.gd" id="1_eb0ko"]
+[ext_resource type="Texture2D" uid="uid://7ocpjys63sjd" path="res://pedro/assets/items/cless_closed.webp" id="1_mypm1"]
+[ext_resource type="Texture2D" uid="uid://baiwe55u1rtea" path="res://pedro/assets/items/chess_open.webp" id="2_vh083"]
+[ext_resource type="PackedScene" uid="uid://c2p8b6u3q3tpk" path="res://pedro/escenes/modal.tscn" id="2_x5104"]
+[ext_resource type="Texture2D" uid="uid://ciyeowf88rt8g" path="res://gabriel/assets/items/mask_fragment_3.webp" id="3_1an4k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qq2y5"]
 atlas = ExtResource("1_mypm1")
@@ -44,6 +47,11 @@ size = Vector2(77, 33)
 size = Vector2(97, 62)
 
 [node name="Chess" type="StaticBody2D" unique_id=547291379]
+script = ExtResource("1_eb0ko")
+
+[node name="Modal" parent="." unique_id=359370617 instance=ExtResource("2_x5104")]
+modal_image = ExtResource("3_1an4k")
+modal_text = "Has recogido la ultima pieza"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=417721523]
 sprite_frames = SubResource("SpriteFrames_ikl0g")
@@ -61,3 +69,5 @@ debug_color = Color(0.99777025, 0, 0.16875929, 0.41960785)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1574147372]
 position = Vector2(0.5, 21)
 shape = SubResource("RectangleShape2D_hoymx")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

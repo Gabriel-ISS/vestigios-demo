@@ -7,7 +7,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_25tws"]
 radius = 14.0
-height = 102.0
+height = 74.17
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ih3e8"]
 atlas = ExtResource("2_1xb88")
@@ -159,7 +159,7 @@ offset_left = Vector2(-5, -25)
 offset_right = Vector2(5, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=596002896]
-visible = false
+position = Vector2(-2, 17)
 shape = SubResource("CapsuleShape2D_25tws")
 debug_color = Color(0, 0.44705883, 0.52156866, 1)
 
@@ -174,7 +174,7 @@ frame_progress = 0.06873493
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=2029753381]
 position = Vector2(19, -69)
 scale = Vector2(1.4714612, 1.3025113)
-color = Color(1, 0.4509804, 0.12941177, 1)
+color = Color(1, 0.70233333, 0.53, 1)
 texture = ExtResource("3_rweml")
 
 [node name="Timer" type="Timer" parent="PointLight2D" unique_id=829344278]

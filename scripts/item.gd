@@ -15,7 +15,6 @@ func _ready() -> void:
 	$PickedModal.modal_image = modal_sprite
 	$PickedModal.modal_text = modal_text
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

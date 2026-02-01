@@ -12,8 +12,10 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_test_objeto_colecionable_picked(id: String, sender: Node2D) -> void:
+func _on_test_objeto_coleccionable_picked(id: String, sender: Node2D) -> void:
 	player_node.input_enabled = false
 
-func _on_test_objeto_colecionable_closed(id: String, sender: Node2D) -> void:
+func _on_test_objeto_coleccionable_closed(id: String, sender: Node2D) -> void:
 	player_node.input_enabled = true
+	if id == "llave":
+		player_node.has_key = true

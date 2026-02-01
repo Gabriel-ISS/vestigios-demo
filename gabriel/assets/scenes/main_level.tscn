@@ -1,11 +1,10 @@
 [gd_scene format=4 uid="uid://deed52ks6bn0s"]
 
 [ext_resource type="Texture2D" uid="uid://b30quc7exb126" path="res://gabriel/assets/terrain/tileset.png" id="1_13coa"]
+[ext_resource type="PackedScene" uid="uid://dklbpwme4d41c" path="res://gabriel/assets/scenes/objects/tree.tscn" id="1_x6w5b"]
 [ext_resource type="PackedScene" uid="uid://dc15hjr6tl4nd" path="res://gabriel/assets/scenes/objects/detective.tscn" id="2_13coa"]
 [ext_resource type="Texture2D" uid="uid://ckw5y6pxtex4y" path="res://gabriel/assets/terrain/rocks.webp" id="2_ypffc"]
 [ext_resource type="Texture2D" uid="uid://dulx2r7efsd3y" path="res://gabriel/assets/terrain/scrub_wall.png" id="3_abhn6"]
-[ext_resource type="Texture2D" uid="uid://dvs261ftqql17" path="res://gabriel/assets/terrain/tree1.webp" id="5_rq47o"]
-[ext_resource type="Texture2D" uid="uid://di3r60cvdpoay" path="res://gabriel/assets/terrain/tree2.webp" id="6_18yts"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xsg0"]
 texture = ExtResource("1_13coa")
@@ -115,28 +114,33 @@ tile_proxies/coords_level = [[1, Vector2i(0, 0)], [3, Vector2i(0, 0)], [2, Vecto
 texture = ExtResource("3_abhn6")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_1xsg0"]
 tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_bnknn")
 
 [node name="Node2D" type="Node2D" unique_id=580360461]
 y_sort_enabled = true
+position = Vector2(-81, 9)
 metadata/_edit_group_ = true
 
-[node name="Tree1" type="Sprite2D" parent="." unique_id=1865741312]
-position = Vector2(536, 385)
-texture = ExtResource("5_rq47o")
-centered = false
-offset = Vector2(-63.4, -516.375)
+[node name="Tree" parent="." unique_id=606354908 instance=ExtResource("1_x6w5b")]
+position = Vector2(676, 515)
+version = 1
 
-[node name="Tree2" type="Sprite2D" parent="." unique_id=2055050525]
-position = Vector2(601.4, 401.375)
-texture = ExtResource("6_18yts")
-offset = Vector2(0, -255.285)
+[node name="Tree2" parent="." unique_id=13885964 instance=ExtResource("1_x6w5b")]
+position = Vector2(515, 507)
+
+[node name="Detective" parent="." unique_id=239483670 instance=ExtResource("2_13coa")]
+y_sort_enabled = true
+position = Vector2(575, 502)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=237195234]
+visible = false
 color = Color(0.06053035, 0.06053035, 0.060530342, 1)
 
 [node name="Map" type="Node2D" parent="." unique_id=565054856]
@@ -151,11 +155,6 @@ scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAAJAAcAAAAEAAAAAAAKAAcAAAAAAAAAAAALAAcAAAABAAAAAAALAAYAAAADAAAAAAAMAAYAAAAEAAAAAAALAAgAAAACAAAAAAAMAAgAAAADAAAAAAAMAAcAAAAAAAAAAAANAAYAAAAEAAAAAAANAAcAAAACAAAAAAAUABIAAAAAAAAAAAAWAA8AAAACAAAAAAAXAA8AAAABAAAAAAAZAA0AAAADAAAAAAAaAA0AAAACAAAAAAAVAAwAAAADAAAAAAAKAA8AAAACAAAAAAAMABEAAAAAAAAAAAAPAAsAAAAEAAAAAAASAAcAAAACAAAAAAAWAAYAAAAEAAAAAAAZAAcAAAABAAAAAAASABAAAAACAAAAAAA=")
 tile_set = SubResource("TileSet_bnknn")
 
-[node name="Scrub" type="TileMapLayer" parent="Map" unique_id=1984561375]
+[node name="ScrubWall" type="TileMapLayer" parent="Map" unique_id=1984561375]
 tile_map_data = PackedByteArray("AAADAAUAAAAAAAAAAAADAAYAAAABAAAAAAACAAYAAAABAAAAAAACAAcAAAABAAAAAAACAAgAAAAAAAAAAAADAAgAAAABAAAAAAADAAkAAAABAAAAAAADAAcAAAAAAAAAAAACAAUAAAAAAAAAAAACAAkAAAABAAAAAAACAAoAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAABAAAAAAADAAwAAAABAAAAAAADAAsAAAABAAAAAAADAAoAAAABAAAAAAADAAQAAAAAAAAAAAAEAAMAAAABAAAAAAAEAAIAAAABAAAAAAAFAAIAAAABAAAAAAAFAAEAAAABAAAAAAAFAAAAAAAAAAAAAAAEAAEAAAABAAAAAAAEAAQAAAAAAAAAAAAFAP//AAAAAAAAAAAFAP7/AAABAAAAAAAEAP//AAAAAAAAAAAEAAAAAAAAAAAAAAAGAP7/AAABAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP7/AAAAAAAAAAAKAP3/AAABAAAAAAAJAP3/AAAAAAAAAAALAP3/AAAAAAAAAAAMAP3/AAAAAAAAAAANAP3/AAABAAAAAAAOAP3/AAAAAAAAAAALAP7/AAAAAAAAAAAMAP7/AAAAAAAAAAAMAP//AAAAAAAAAAANAP//AAAAAAAAAAANAP7/AAAAAAAAAAANAAAAAAABAAAAAAANAAEAAAABAAAAAAANAAIAAAABAAAAAAAOAAEAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAP//AAABAAAAAAAOAP//AAABAAAAAAAPAAAAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAABAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAPAAIAAAABAAAAAAAPAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAARAAEAAAABAAAAAAASAP//AAAAAAAAAAARAP//AAABAAAAAAAQAAEAAAAAAAAAAAAQAP//AAAAAAAAAAASAAEAAAABAAAAAAASAAIAAAABAAAAAAASAAMAAAABAAAAAAARAAMAAAAAAAAAAAARAAQAAAAAAAAAAAASAAAAAAAAAAAAAAATAAAAAAABAAAAAAATAAEAAAABAAAAAAATAAIAAAAAAAAAAAATAAMAAAAAAAAAAAARAAIAAAAAAAAAAAAQAAIAAAABAAAAAAAQAAMAAAABAAAAAAAQAAQAAAABAAAAAAAPAAMAAAABAAAAAAAMAAMAAAABAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAANAAkAAAABAAAAAAANAAoAAAAAAAAAAAAOAAoAAAABAAAAAAAOAAkAAAAAAAAAAAAOAAgAAAAAAAAAAAANAAcAAAAAAAAAAAAMAAYAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAsAAAAAAAAAAAANAAsAAAABAAAAAAANAAwAAAABAAAAAAAMAAwAAAABAAAAAAAMAA0AAAAAAAAAAAALAA0AAAAAAAAAAAALAA4AAAAAAAAAAAALAAwAAAABAAAAAAAMAAsAAAABAAAAAAAKAAwAAAABAAAAAAAJAAwAAAAAAAAAAAAIAAwAAAABAAAAAAAHAAwAAAAAAAAAAAAHAA0AAAAAAAAAAAAMAA4AAAABAAAAAAAKAA0AAAAAAAAAAAAJAA0AAAABAAAAAAAIAA0AAAAAAAAAAAAHAAsAAAABAAAAAAAGAAsAAAABAAAAAAAGAAwAAAABAAAAAAAFAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAAEAAsAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_1xsg0")
-
-[node name="Detective" parent="." unique_id=239483670 instance=ExtResource("2_13coa")]
-position = Vector2(520, 403)
-
-[node name="trees" type="Node" parent="." unique_id=1044768986]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvs261ftqql17"
-path="res://.godot/imported/tree1.webp-d58e6cf1998ec37c57ed91dd9d201432.ctex"
+uid="uid://di3r60cvdpoay"
+path="res://.godot/imported/tree2.webp-694ca76100202e46706cbd4890bdb755.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gabriel/assets/terrain/tree1.webp"
-dest_files=["res://.godot/imported/tree1.webp-d58e6cf1998ec37c57ed91dd9d201432.ctex"]
+source_file="res://gabriel/assets/backup/tree2.webp"
+dest_files=["res://.godot/imported/tree2.webp-694ca76100202e46706cbd4890bdb755.ctex"]
 
 [params]
 

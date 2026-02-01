@@ -13,6 +13,7 @@ extends CharacterBody2D
 @export var offset_down: Vector2 = Vector2(0, 20)
 @export var offset_left: Vector2 = Vector2(-20, 0)
 @export var offset_right: Vector2 = Vector2(20, 0)
+@export var has_key: bool = false
 
 # Rotaciones por dirección (en grados)
 @export var rotation_up := -90

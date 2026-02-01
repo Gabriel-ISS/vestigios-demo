@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qihve63e1b6y"
-path="res://.godot/imported/scrub_wall.png-9cf7fa6557477155f530b0963a8d3e7a.ctex"
+uid="uid://csnas426qsaaf"
+path="res://.godot/imported/Creditos.jpg-95211bf03a3f1ff01dad6b9d14924ab0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gabriel/assets/terrain/scrub_wall.png"
-dest_files=["res://.godot/imported/scrub_wall.png-9cf7fa6557477155f530b0963a8d3e7a.ctex"]
+source_file="res://assets/Creditos.jpg"
+dest_files=["res://.godot/imported/Creditos.jpg-95211bf03a3f1ff01dad6b9d14924ab0.ctex"]
 
 [params]
 

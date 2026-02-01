@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qihve63e1b6y"
-path="res://.godot/imported/scrub_wall.png-9cf7fa6557477155f530b0963a8d3e7a.ctex"
+uid="uid://c4j5gvf6cypal"
+path="res://.godot/imported/fondo_menu.webp-f55320451f4e581ff0ddf809652a2743.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gabriel/assets/terrain/scrub_wall.png"
-dest_files=["res://.godot/imported/scrub_wall.png-9cf7fa6557477155f530b0963a8d3e7a.ctex"]
+source_file="res://assets/fondo_menu.webp"
+dest_files=["res://.godot/imported/fondo_menu.webp-f55320451f4e581ff0ddf809652a2743.ctex"]
 
 [params]
 

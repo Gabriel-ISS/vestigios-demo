@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cvr2ci2m7abrj"]
+
+[ext_resource type="Script" uid="uid://ke4oqirh8m43" path="res://Iván/Scripts/main_menu.gd" id="1_3ap38"]
+[ext_resource type="Texture2D" uid="uid://c4j5gvf6cypal" path="res://assets/fondo_menu.webp" id="2_xqk8k"]
+[ext_resource type="FontFile" uid="uid://dyw0fu3dx5u67" path="res://assets/NightsideDemoRegular.ttf" id="3_xqk8k"]
+
+[node name="Control" type="Control" unique_id=1018239268]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3ap38")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1990489068]
+layout_mode = 0
+offset_left = -55.0
+offset_top = -5.0
+offset_right = 1185.0
+offset_bottom = 693.0
+texture = ExtResource("2_xqk8k")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2081222456]
+layout_direction = 1
+layout_mode = 1
+offset_left = 854.0
+offset_top = 370.0
+offset_right = 1135.0
+offset_bottom = 630.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=164016252]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="CenterContainer/VBoxContainer" unique_id=938656976]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xqk8k")
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="Credits" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2073443549]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xqk8k")
+theme_override_font_sizes/font_size = 50
+text = "CREDITS"
+
+[node name="Exit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1302326350]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xqk8k")
+theme_override_font_sizes/font_size = 50
+text = "EXIT"
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=5777012]
+custom_minimum_size = Vector2(0.62, 0)
+layout_direction = 1
+layout_mode = 0
+offset_left = 203.0
+offset_top = -22.0
+offset_right = 920.0
+offset_bottom = 513.0
+
+[node name="Label" type="Label" parent="CenterContainer2" unique_id=781811386]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_xqk8k")
+theme_override_font_sizes/font_size = 150
+text = "VESTIGIOS
+"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

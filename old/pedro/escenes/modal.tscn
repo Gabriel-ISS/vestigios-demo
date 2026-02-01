@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c2p8b6u3q3tpk"]
+
+[ext_resource type="Texture2D" uid="uid://nctflq24trqd" path="res://old/icon.svg" id="1_2s0gk"]
+[ext_resource type="Script" uid="uid://bikjx1a8hbp6u" path="res://old/scripts/modal_script.gd" id="1_s178h"]
+
+[node name="Modal" type="CanvasLayer" unique_id=359370617]
+script = ExtResource("1_s178h")
+
+[node name="Dimmer" type="ColorRect" parent="." unique_id=2050774974]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.65)
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1583060810]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Center" unique_id=1082213497]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Padding" type="MarginContainer" parent="Center/Panel" unique_id=1539589501]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Content" type="VBoxContainer" parent="Center/Panel/Padding" unique_id=1303826399]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Image" type="TextureRect" parent="Center/Panel/Padding/Content" unique_id=1036264452]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_2s0gk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="Center/Panel/Padding/Content" unique_id=580858524]
+layout_mode = 2
+text = "-"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Center/Panel/Padding/Content" unique_id=1382617965]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "OK"
+
+[connection signal="pressed" from="Center/Panel/Padding/Content/Button" to="." method="_on_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7ocpjys63sjd"
-path="res://.godot/imported/cless1.webp-0fb797d58343045a57c0695a8e2db8c9.ctex"
+uid="uid://kair2ccimhdi"
+path="res://.godot/imported/key.webp-e3cb8f647c7706f5e8b53c1507cfbae3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gabriel/assets/cless1.webp"
-dest_files=["res://.godot/imported/cless1.webp-0fb797d58343045a57c0695a8e2db8c9.ctex"]
+source_file="res://gabriel/assets/items/key.webp"
+dest_files=["res://.godot/imported/key.webp-e3cb8f647c7706f5e8b53c1507cfbae3.ctex"]
 
 [params]
 

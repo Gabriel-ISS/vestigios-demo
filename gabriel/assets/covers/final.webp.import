@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6ntajliyxxx8"
-path="res://.godot/imported/tileset1.webp-78ecb6bc211ff17696336ed33b0763f9.ctex"
+uid="uid://5w5k4vxnwa7p"
+path="res://.godot/imported/final.webp-31dd6e48811f7ca95f02e51a5c4c31e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gabriel/assets/tileset1.webp"
-dest_files=["res://.godot/imported/tileset1.webp-78ecb6bc211ff17696336ed33b0763f9.ctex"]
+source_file="res://gabriel/assets/covers/final.webp"
+dest_files=["res://.godot/imported/final.webp-31dd6e48811f7ca95f02e51a5c4c31e4.ctex"]
 
 [params]
 

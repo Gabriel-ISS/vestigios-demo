@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bgtosyxvtqdtr"]
+
+[ext_resource type="Script" uid="uid://dcyxyb38qglms" path="res://scripts/item.gd" id="1_3yygb"]
+[ext_resource type="PackedScene" uid="uid://c2p8b6u3q3tpk" path="res://escenes/modal.tscn" id="2_0yty7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3yygb"]
+radius = 64.0
+
+[node name="CollectibleObject" type="Node2D" unique_id=961078508]
+script = ExtResource("1_3yygb")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1566677912]
+
+[node name="PickedModal" parent="." unique_id=359370617 instance=ExtResource("2_0yty7")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=289013073]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=701171315]
+shape = SubResource("CircleShape2D_3yygb")
+
+[connection signal="closed" from="PickedModal" to="." method="_on_picked_modal_closed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

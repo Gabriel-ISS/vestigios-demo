@@ -128,10 +128,8 @@ physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_k5pu3")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k5pu3"]
-load_path = "res://.godot/imported/cless_closed.webp-c7f4e9bf83c23776d242bfadada67e63.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iqu8w"]
-load_path = "res://.godot/imported/key.webp-b86129bbcaa648009a64c250fa255bcb.ctex"
 
 [node name="Node2D" type="Node2D" unique_id=580360461]
 y_sort_enabled = true
@@ -155,7 +153,7 @@ y_sort_enabled = true
 position = Vector2(16, 71)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=237195234]
-color = Color(0.021434639, 0.021434631, 0.021434652, 1)
+color = Color(0.14044744, 0.14044744, 0.14044744, 1)
 
 [node name="Map" type="Node2D" parent="." unique_id=565054856]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baq8d5tvrqyb3"
-path="res://.godot/imported/scrub2.png-44338c5014dfae640d67e0178fd90042.ctex"
+uid="uid://5w5k4vxnwa7p"
+path="res://.godot/imported/bad_ending.webp-9aa6cdbae4023cf2332c3e5fcf5b4212.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/terrain/scrub2.png"
-dest_files=["res://.godot/imported/scrub2.png-44338c5014dfae640d67e0178fd90042.ctex"]
+source_file="res://assets/covers/bad_ending.webp"
+dest_files=["res://.godot/imported/bad_ending.webp-9aa6cdbae4023cf2332c3e5fcf5b4212.ctex"]
 
 [params]
 

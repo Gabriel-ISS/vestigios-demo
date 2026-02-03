@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dyw0fu3dx5u67"
-path="res://.godot/imported/NightsideDemoRegular.ttf-d3be5b1baf06578e670f36fd60f376c4.fontdata"
+path="res://.godot/imported/NightsideDemoRegular.ttf-bfe93ddbefac16d4b103489eded0edba.fontdata"
 
 [deps]
 
-source_file="res://assets/NightsideDemoRegular.ttf"
-dest_files=["res://.godot/imported/NightsideDemoRegular.ttf-d3be5b1baf06578e670f36fd60f376c4.fontdata"]
+source_file="res://assets/fonts/NightsideDemoRegular.ttf"
+dest_files=["res://.godot/imported/NightsideDemoRegular.ttf-bfe93ddbefac16d4b103489eded0edba.fontdata"]
 
 [params]
 

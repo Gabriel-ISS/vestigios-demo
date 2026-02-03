@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csnas426qsaaf"
-path="res://.godot/imported/Creditos.jpg-95211bf03a3f1ff01dad6b9d14924ab0.ctex"
+uid="uid://bpulgswulebsc"
+path="res://.godot/imported/good_ending.webp-233b3db2cab77fc722fbc0541718d8e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Creditos.jpg"
-dest_files=["res://.godot/imported/Creditos.jpg-95211bf03a3f1ff01dad6b9d14924ab0.ctex"]
+source_file="res://assets/covers/good_ending.webp"
+dest_files=["res://.godot/imported/good_ending.webp-233b3db2cab77fc722fbc0541718d8e1.ctex"]
 
 [params]
 

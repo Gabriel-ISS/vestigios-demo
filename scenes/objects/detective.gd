@@ -1,28 +1,22 @@
 extends CharacterBody2D
 
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var dead_screen: CanvasLayer = $DeadScreen
+@onready var flashlight: PointLight2D = $PointLight2D
 
+@export_category('Dependencies')
 @export var speed = 400
-@export var dead_screen: CanvasLayer
 
-# Linterna independiente
-@export var flashlight: PointLight2D
-
-# Offsets editables
+@export_category('Light offset')
 @export var offset_up: Vector2 = Vector2(0, -20)
 @export var offset_down: Vector2 = Vector2(0, 20)
 @export var offset_left: Vector2 = Vector2(-20, 0)
 @export var offset_right: Vector2 = Vector2(20, 0)
 
-# Rotaciones editables
-@export var rotation_up := -90
-@export var rotation_down := 90
-@export var rotation_left := 180
-@export var rotation_right := 0
-
 var last_direction := "down"
 
 func _ready():
+	dead_screen.visible = false
 	update_animation("idle")
 	update_flashlight()
 
@@ -69,16 +63,19 @@ func update_flashlight():
 	match last_direction:
 		"up":
 			offset = offset_up
-			rot = rotation_up
+			rot = -90
 		"down":
 			offset = offset_down
-			rot = rotation_down
+			rot = 90
 		"left":
 			offset = offset_left
-			rot = rotation_left
+			rot = 180
 		"right":
 			offset = offset_right
-			rot = rotation_right
+			rot = 0
 
 	flashlight.global_position = global_position + offset
 	flashlight.rotation = deg_to_rad(rot)
+
+func _on_back_to_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/ui/screens/main_menu.tscn")

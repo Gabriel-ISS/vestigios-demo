@@ -1,68 +1,69 @@
 [gd_scene format=3 uid="uid://dc15hjr6tl4nd"]
 
-[ext_resource type="Script" uid="uid://ctagh4owjd2tf" path="res://old/scripts/character.gd" id="1_qo12b"]
-[ext_resource type="Texture2D" uid="uid://vei0xeg1ghn8" path="res://old/pedro/assets/arriba_y_abajo_corree_nuevo_con_la_vela.webp" id="2_vm64x"]
-[ext_resource type="Texture2D" uid="uid://b2vh3ccq2dqvk" path="res://old/pedro/assets/luz1.webp" id="3_vdy4y"]
-[ext_resource type="Script" uid="uid://dghhba3d6p5wv" path="res://old/scripts/ligth_timer.gd" id="4_ga7vq"]
-[ext_resource type="Texture2D" uid="uid://5w5k4vxnwa7p" path="res://assets/covers/final.webp" id="5_ec20u"]
+[ext_resource type="Script" uid="uid://b5g3chbmaiytc" path="res://scenes/objects/detective.gd" id="1_ec20u"]
+[ext_resource type="PackedScene" uid="uid://ci34f6cxv5oa0" path="res://scenes/objects/candle.tscn" id="2_xys2r"]
+[ext_resource type="Texture2D" uid="uid://5w5k4vxnwa7p" path="res://assets/covers/bad_ending.webp" id="5_ec20u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fsawu"]
 radius = 22.203604
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xys2r"]
+load_path = "res://.godot/imported/arriba_y_abajo_corree_nuevo_con_la_vela.webp-f49373813fcc25c28f2548a864c4ae92.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ih3e8"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uyhwx"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(0, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wu6g"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(0, 384, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gf62x"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(0, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hylrk"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_61xq2"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nd7gg"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(128, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_shwiy"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(0, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trfcy"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(256, 256, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oeofr"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(128, 384, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cj5an"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(0, 384, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_elium"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(256, 384, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tcv0c"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(128, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y5hlo"]
-atlas = ExtResource("2_vm64x")
+atlas = SubResource("CompressedTexture2D_xys2r")
 region = Rect2(256, 128, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_32ngq"]
@@ -150,13 +151,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=837353184 node_paths=PackedStringArray("flashlight")]
-script = ExtResource("1_qo12b")
-flashlight = NodePath("PointLight2D")
-offset_up = Vector2(25, -40)
-offset_down = Vector2(-25, -25)
-offset_left = Vector2(-5, -25)
-offset_right = Vector2(5, -5)
+[node name="Detective" type="CharacterBody2D" unique_id=837353184]
+script = ExtResource("1_ec20u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=596002896]
 position = Vector2(-1, -11)
@@ -166,41 +162,40 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813277843]
 sprite_frames = SubResource("SpriteFrames_32ngq")
-animation = &"idle_right"
+animation = &"idle_up"
 autoplay = "idle_up"
 centered = false
 offset = Vector2(-64.45, -129.375)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=42083914]
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2029753381]
-position = Vector2(19, -69)
-scale = Vector2(1.4714612, 1.3025113)
-color = Color(1, 0.4509804, 0.12941177, 1)
-texture = ExtResource("3_vdy4y")
+[node name="Candle" parent="." unique_id=371618409 node_paths=PackedStringArray("dead_screen") instance=ExtResource("2_xys2r")]
+position = Vector2(0, -80)
+dead_screen = NodePath("../DeadScreen")
+total_duration = 5.0
 
-[node name="Timer" type="Timer" parent="PointLight2D" unique_id=829344278]
-wait_time = 3.0
-autostart = true
-script = ExtResource("4_ga7vq")
-total_duration = 60.0
-use_curve = true
-curve_mode = 3
-flicker_speed = 5.0
-flicker_intensity = 0.003
+[node name="DeadScreen" type="CanvasLayer" parent="." unique_id=1548642180]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1548642180]
-visible = false
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=129397101]
-layout_mode = 3
+[node name="TextureRect" type="TextureRect" parent="DeadScreen" unique_id=1456335824]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control" unique_id=2009418028]
-position = Vector2(583.50006, 327)
-scale = Vector2(0.8481105, 0.8412903)
 texture = ExtResource("5_ec20u")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="DeadScreen" unique_id=534161282]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 374.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackToMenu" type="Button" parent="DeadScreen/CenterContainer" unique_id=1450389903]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Back to menu"
+
+[connection signal="pressed" from="DeadScreen/CenterContainer/BackToMenu" to="." method="_on_back_to_menu_pressed"]

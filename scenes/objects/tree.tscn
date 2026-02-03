@@ -11,7 +11,6 @@ script = ExtResource("1_kro7c")
 version = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1408186087]
-z_index = 1
 y_sort_enabled = true
 texture = ExtResource("1_efsrh")
 centered = false

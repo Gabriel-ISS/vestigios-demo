@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var dead_screen: CanvasLayer = $DeadScreen
-@onready var flashlight: PointLight2D = $PointLight2D
+@onready var flashlight: PointLight2D = $Candle
 
 @export_category('Dependencies')
 @export var speed = 400

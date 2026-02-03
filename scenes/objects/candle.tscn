@@ -11,9 +11,3 @@ color = Color(1, 0.4509804, 0.12941177, 1)
 texture = SubResource("CompressedTexture2D_86xgs")
 script = ExtResource("1_5tksn")
 curve_mode = 3
-
-[node name="Timer" type="Timer" parent="." unique_id=62349876]
-wait_time = 3.0
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

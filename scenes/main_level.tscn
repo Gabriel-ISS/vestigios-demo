@@ -133,9 +133,8 @@ load_path = "res://.godot/imported/cless_closed.webp-c7f4e9bf83c23776d242bfadada
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iqu8w"]
 load_path = "res://.godot/imported/key.webp-b86129bbcaa648009a64c250fa255bcb.ctex"
 
-[node name="Node2D" type="Node2D" unique_id=580360461]
+[node name="MainLevel" type="Node2D" unique_id=580360461]
 y_sort_enabled = true
-metadata/_edit_group_ = true
 
 [node name="Tree" parent="." unique_id=606354908 instance=ExtResource("1_x6w5b")]
 position = Vector2(-380, -886)

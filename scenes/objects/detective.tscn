@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://vei0xeg1ghn8" path="res://old/pedro/assets/arriba_y_abajo_corree_nuevo_con_la_vela.webp" id="2_vm64x"]
 [ext_resource type="Texture2D" uid="uid://b2vh3ccq2dqvk" path="res://old/pedro/assets/luz1.webp" id="3_vdy4y"]
 [ext_resource type="Script" uid="uid://dghhba3d6p5wv" path="res://old/scripts/ligth_timer.gd" id="4_ga7vq"]
+[ext_resource type="Texture2D" uid="uid://5w5k4vxnwa7p" path="res://assets/covers/final.webp" id="5_ec20u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fsawu"]
 radius = 22.203604
@@ -187,3 +188,19 @@ use_curve = true
 curve_mode = 3
 flicker_speed = 5.0
 flicker_intensity = 0.003
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1548642180]
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=129397101]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control" unique_id=2009418028]
+position = Vector2(583.50006, 327)
+scale = Vector2(0.8481105, 0.8412903)
+texture = ExtResource("5_ec20u")

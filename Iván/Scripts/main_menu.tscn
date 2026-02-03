@@ -4,26 +4,59 @@
 [ext_resource type="Texture2D" uid="uid://c4j5gvf6cypal" path="res://assets/fondo_menu.webp" id="2_xqk8k"]
 [ext_resource type="FontFile" uid="uid://dyw0fu3dx5u67" path="res://assets/NightsideDemoRegular.ttf" id="3_xqk8k"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqk8k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxxgq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb022"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqb7d"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7uh0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu4s6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Control" type="Control" unique_id=1018239268]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_3ap38")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1990489068]
-layout_mode = 0
-offset_left = -55.0
-offset_top = -5.0
-offset_right = 1185.0
-offset_bottom = 693.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -25.0
+offset_right = 44.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_xqk8k")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2081222456]
 layout_direction = 1
 layout_mode = 1
-offset_left = 854.0
-offset_top = 370.0
-offset_right = 1135.0
-offset_bottom = 630.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -281.0
+offset_top = -260.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=164016252]
 layout_mode = 2
@@ -32,31 +65,45 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xqk8k")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xqk8k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uxxgq")
 text = "PLAY"
 
 [node name="Credits" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2073443549]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xqk8k")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_qb022")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oqb7d")
 text = "CREDITS"
 
 [node name="Exit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1302326350]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_xqk8k")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_m7uh0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vu4s6")
 text = "EXIT"
 
 [node name="CenterContainer2" type="CenterContainer" parent="." unique_id=5777012]
 custom_minimum_size = Vector2(0.62, 0)
 layout_direction = 1
-layout_mode = 0
-offset_left = 203.0
-offset_top = -22.0
-offset_right = 920.0
-offset_bottom = 513.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -358.5
+offset_top = -267.5
+offset_right = 358.5
+offset_bottom = 267.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="CenterContainer2" unique_id=781811386]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.64736634, 0.07109884, 0.22436213, 1)
 theme_override_fonts/font = ExtResource("3_xqk8k")
 theme_override_font_sizes/font_size = 150
 text = "VESTIGIOS

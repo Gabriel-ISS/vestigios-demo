@@ -1,5 +1,7 @@
 extends Timer
 
+@export var final: CanvasLayer
+
 @export var light_node_path: NodePath = "../"
 
 @export var min_scale: float = 0.0
@@ -69,6 +71,7 @@ func _on_timeout():
 
 
 func _finish_light():
+	final.visible = true
 
 	finished = true
 	stop()

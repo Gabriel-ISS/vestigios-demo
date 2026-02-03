@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://ci34f6cxv5oa0"]
 
+[ext_resource type="Texture2D" uid="uid://b2vh3ccq2dqvk" path="res://assets/masks/lamp_light.webp" id="1_5divp"]
 [ext_resource type="Script" uid="uid://dghhba3d6p5wv" path="res://scenes/objects/candle.gd" id="1_5tksn"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86xgs"]
-load_path = "res://.godot/imported/luz1.webp-ce84c52f336b50834b9a34006c42bd91.ctex"
 
 [node name="Candle" type="PointLight2D" unique_id=371618409]
 scale = Vector2(1.4714612, 1.3025113)
 color = Color(1, 0.4509804, 0.12941177, 1)
-texture = SubResource("CompressedTexture2D_86xgs")
+texture = ExtResource("1_5divp")
 script = ExtResource("1_5tksn")
 curve_mode = 3

@@ -172,7 +172,6 @@ offset = Vector2(-64.45, -129.375)
 [node name="Candle" parent="." unique_id=371618409 node_paths=PackedStringArray("dead_screen") instance=ExtResource("2_xys2r")]
 position = Vector2(0, -80)
 dead_screen = NodePath("../DeadScreen")
-total_duration = 5.0
 
 [node name="DeadScreen" type="CanvasLayer" parent="." unique_id=1548642180]
 

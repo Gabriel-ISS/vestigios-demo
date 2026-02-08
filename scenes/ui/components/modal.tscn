@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://ndg8xqmlwf11"]
+
+[ext_resource type="Script" uid="uid://d32ljy3ggtrqq" path="res://scenes/ui/components/modal.gd" id="1_speq1"]
+[ext_resource type="Texture2D" uid="uid://cveiseseo0nm2" path="res://assets/items/mask.webp" id="2_11ec2"]
+
+[node name="Modal" type="CanvasLayer" unique_id=1642474610]
+script = ExtResource("1_speq1")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2083740148]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="PanelContainer" parent="CenterContainer" unique_id=1730464911]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Background" type="Panel" parent="CenterContainer/Container" unique_id=1498261994]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Container" unique_id=369425887]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="Main" type="VBoxContainer" parent="CenterContainer/Container/MarginContainer" unique_id=1824841757]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="CenterContainer/Container/MarginContainer/Main" unique_id=1137092264]
+layout_mode = 2
+text = "Titulo"
+horizontal_alignment = 1
+
+[node name="Body" type="VBoxContainer" parent="CenterContainer/Container/MarginContainer/Main" unique_id=1327578829]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Image" type="TextureRect" parent="CenterContainer/Container/MarginContainer/Main/Body" unique_id=1939207775]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_11ec2")
+expand_mode = 5
+
+[node name="Description" type="Label" parent="CenterContainer/Container/MarginContainer/Main/Body" unique_id=1489178157]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Descripción... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="CenterContainer/Container/MarginContainer/Main/Body" unique_id=1208350522]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="CenterContainer/Container/MarginContainer/Main/Body/Buttons" unique_id=1784734089]
+layout_mode = 2
+text = "Continuar"
+
+[node name="CancelButton" type="Button" parent="CenterContainer/Container/MarginContainer/Main/Body/Buttons" unique_id=215579233]
+layout_mode = 2
+text = "Cancelar"
+
+[connection signal="pressed" from="CenterContainer/Container/MarginContainer/Main/Body/Buttons/ConfirmButton" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="CenterContainer/Container/MarginContainer/Main/Body/Buttons/CancelButton" to="." method="_on_cancel_button_pressed"]

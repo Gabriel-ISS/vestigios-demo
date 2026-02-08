@@ -152,6 +152,10 @@ animations = [{
 [node name="Detective" type="CharacterBody2D" unique_id=837353184]
 script = ExtResource("1_ec20u")
 speed = 300
+offset_up = Vector2(16, -123)
+offset_down = Vector2(-19, -79)
+offset_left = Vector2(-24, -83)
+offset_right = Vector2(20, -84)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=596002896]
 position = Vector2(-1, -11)
@@ -161,16 +165,15 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1813277843]
 sprite_frames = SubResource("SpriteFrames_32ngq")
-animation = &"walk_down"
+animation = &"walk_right"
 autoplay = "idle_up"
-frame_progress = 0.37640798
 centered = false
 offset = Vector2(-64.45, -129.375)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=42083914]
 
 [node name="Candle" parent="." unique_id=371618409 node_paths=PackedStringArray("dead_screen") instance=ExtResource("2_xys2r")]
-position = Vector2(0, -80)
+position = Vector2(20, -84)
 dead_screen = NodePath("../DeadScreen")
 
 [node name="DeadScreen" type="CanvasLayer" parent="." unique_id=1548642180]

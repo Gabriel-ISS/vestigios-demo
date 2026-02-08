@@ -5,7 +5,9 @@
 
 [node name="Candle" type="PointLight2D" unique_id=371618409]
 scale = Vector2(1.4714612, 1.3025113)
-color = Color(1, 0.4509804, 0.12941177, 1)
+color = Color(0.9999965, 0.48554242, 0.20974836, 1)
+energy = 1.9
 texture = ExtResource("1_5divp")
+offset = Vector2(-15, 10)
 script = ExtResource("1_5tksn")
 curve_mode = 3

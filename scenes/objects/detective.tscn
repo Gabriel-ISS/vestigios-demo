@@ -200,6 +200,7 @@ theme_override_font_sizes/font_size = 36
 text = "Back to menu"
 
 [node name="Dialog" parent="." unique_id=317613777 instance=ExtResource("5_aiqs3")]
+visible = false
 offset_left = 39.0
 offset_top = -141.0
 offset_right = 249.0

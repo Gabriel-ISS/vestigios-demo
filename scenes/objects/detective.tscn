@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b5g3chbmaiytc" path="res://scenes/objects/detective.gd" id="1_ec20u"]
 [ext_resource type="Texture2D" uid="uid://cybkiapqw7wfr" path="res://assets/character.webp" id="2_86xgs"]
 [ext_resource type="PackedScene" uid="uid://ci34f6cxv5oa0" path="res://scenes/objects/candle.tscn" id="2_xys2r"]
+[ext_resource type="PackedScene" uid="uid://y4tjyls05gfu" path="res://scenes/ui/components/dialog.tscn" id="5_aiqs3"]
 [ext_resource type="Texture2D" uid="uid://5w5k4vxnwa7p" path="res://assets/covers/bad_ending.webp" id="5_ec20u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fsawu"]
@@ -197,5 +198,12 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Back to menu"
+
+[node name="Dialog" parent="." unique_id=317613777 instance=ExtResource("5_aiqs3")]
+visible = false
+offset_left = 39.0
+offset_top = -141.0
+offset_right = 249.0
+offset_bottom = -66.0
 
 [connection signal="pressed" from="DeadScreen/CenterContainer/BackToMenu" to="." method="_on_back_to_menu_pressed"]

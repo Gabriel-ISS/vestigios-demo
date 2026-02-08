@@ -29,13 +29,16 @@ func _process(delta: float) -> void:
 		return
 
 	elapsed_time += delta
-	var t = clamp(elapsed_time / total_duration, 0.0, 1.0)
+
+	var t = elapsed_time / total_duration
 
 	# Si llegó al final
-	if t >= 1.0:
+	if t >= 0.9:
 		_finish_light()
 		return
 
+	t = clamp(t, 0.0, 1.0)
+	
 	# Aplicar curva de atenuación
 	t = _apply_curve(t)
 

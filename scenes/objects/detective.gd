@@ -59,24 +59,18 @@ func update_flashlight():
 		return
 
 	var offset := Vector2.ZERO
-	var rot := 0.0
 
 	match last_direction:
 		"up":
 			offset = offset_up
-			rot = -90
 		"down":
 			offset = offset_down
-			rot = 90
 		"left":
 			offset = offset_left
-			rot = 180
 		"right":
 			offset = offset_right
-			rot = 0
 
 	flashlight.global_position = global_position + offset
-	flashlight.rotation = deg_to_rad(rot)
 
 func _on_back_to_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/ui/screens/main_menu.tscn")

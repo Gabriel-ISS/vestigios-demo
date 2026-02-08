@@ -154,7 +154,6 @@ y_sort_enabled = true
 position = Vector2(16, 71)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=237195234]
-visible = false
 color = Color(0.021434639, 0.021434631, 0.021434652, 1)
 
 [node name="Map" type="Node2D" parent="." unique_id=565054856]

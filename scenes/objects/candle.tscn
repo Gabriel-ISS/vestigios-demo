@@ -2,12 +2,50 @@
 
 [ext_resource type="Texture2D" uid="uid://b2vh3ccq2dqvk" path="res://assets/masks/lamp_light.webp" id="1_5divp"]
 [ext_resource type="Script" uid="uid://dghhba3d6p5wv" path="res://scenes/objects/candle.gd" id="1_5tksn"]
+[ext_resource type="Texture2D" uid="uid://k40x50wvegy1" path="res://assets/items/flame.png" id="3_8vpes"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8pqx"]
+atlas = ExtResource("3_8vpes")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baloa"]
+atlas = ExtResource("3_8vpes")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58hbn"]
+atlas = ExtResource("3_8vpes")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m5utb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8pqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baloa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58hbn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Candle" type="PointLight2D" unique_id=371618409]
 scale = Vector2(1.4714612, 1.3025113)
 color = Color(0.9999965, 0.48554242, 0.20974836, 1)
 energy = 1.9
 texture = ExtResource("1_5divp")
-offset = Vector2(-15, 10)
+offset = Vector2(-13, 6)
 script = ExtResource("1_5tksn")
 curve_mode = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1085294914]
+position = Vector2(0.59833276, -1.4305115e-06)
+scale = Vector2(0.44344574, 0.55685806)
+sprite_frames = SubResource("SpriteFrames_m5utb")
+autoplay = "default"
+frame = 1
+frame_progress = 0.5849679

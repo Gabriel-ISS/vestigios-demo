@@ -1,4 +1,4 @@
-class_name Dialog extends VBoxContainer
+class_name Dialog extends CanvasLayer
 
 @onready var label: Label = $PanelContainer/MarginContainer/Label
 @onready var timer: Timer = $Timer

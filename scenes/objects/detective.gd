@@ -21,33 +21,44 @@ func _ready():
 	update_animation("idle")
 	update_flashlight()
 
-func _physics_process(_delta):
+func _process(_delta):
+	handle_animation()
 	handle_input()
 	move_and_slide()
 	update_flashlight()
 
 func handle_input():
-	var direction := Vector2.ZERO
-
+	var direction: Vector2 = Vector2.ZERO
+	
 	if Input.is_action_pressed("up"):
 		direction.y = -1
-		last_direction = "up"
 	elif Input.is_action_pressed("down"):
 		direction.y = 1
-		last_direction = "down"
 	elif Input.is_action_pressed("left"):
 		direction.x = -1
-		last_direction = "left"
 	elif Input.is_action_pressed("right"):
 		direction.x = 1
-		last_direction = "right"
+	
+	velocity = direction * speed
 
-	if direction == Vector2.ZERO:
-		velocity = Vector2.ZERO
+func handle_animation():
+	"""Esta función actualiza la animación en base a la velocidad del personaje.
+	Siempre se debe ejecutar antes de establecer la animación del personaje."""
+	
+	if velocity == Vector2.ZERO:
 		update_animation("idle")
-	else:
-		velocity = direction * speed
-		update_animation("walk")
+		return
+	
+	if velocity.x > 0:
+		last_direction = "right"
+	elif velocity.x < 0:
+		last_direction = "left"
+	elif velocity.y > 0:
+		last_direction = "down"
+	elif velocity.y < 0:
+		last_direction = "up"
+	
+	update_animation("walk")
 
 func update_animation(state: String):
 	var anim = state + "_" + last_direction

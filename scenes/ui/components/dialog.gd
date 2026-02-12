@@ -25,8 +25,8 @@ func _process(_delta: float) -> void:
 	box.position.x = pos_canvas.x
 	box.position.y = pos_canvas.y - box.size.y
 
-func show_dialog(text: String, duration: float):
-	label.text = text
+func show_dialog(dialog_text: String, duration: float):
+	label.text = dialog_text
 	visible = true
 	timer.start(duration)
 

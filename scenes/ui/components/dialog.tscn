@@ -1,35 +1,47 @@
 [gd_scene format=3 uid="uid://y4tjyls05gfu"]
 
 [ext_resource type="Script" uid="uid://ck2s2p1r3ljj0" path="res://scenes/ui/components/dialog.gd" id="1_vt160"]
+[ext_resource type="Texture2D" uid="uid://c7b4i14l6f04o" path="res://assets/ui/dialog_box.png" id="2_648f3"]
 
-[node name="Dialog" type="VBoxContainer" unique_id=317613777]
-z_index = 10
-offset_right = 210.0
-offset_bottom = 75.0
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1264922414]
 script = ExtResource("1_vt160")
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=19052960]
+[node name="Timer" type="Timer" parent="." unique_id=436096070]
+one_shot = true
+
+[node name="DialogBox" type="VBoxContainer" parent="." unique_id=317613777]
+z_index = 10
+custom_minimum_size = Vector2(0, 500)
+offset_right = 210.0
+offset_bottom = 500.00012
+pivot_offset = Vector2(0, 500)
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogBox" unique_id=2146875122]
 layout_mode = 2
+
+[node name="Bg" type="NinePatchRect" parent="DialogBox/MarginContainer" unique_id=40958981]
+layout_mode = 2
+texture = ExtResource("2_648f3")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="PanelContainer" unique_id=1084822823]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=2146875122]
+[node name="MarginContainer" type="MarginContainer" parent="DialogBox/MarginContainer" unique_id=1454196668]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer" unique_id=2119814140]
+[node name="Label" type="Label" parent="DialogBox/MarginContainer/MarginContainer" unique_id=2119814140]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 13
-text = "Esto necesita una llave, quizas la encuentre en la cabaña."
+text = "Esto necesita una llave, quizas la encuentre en la cabaña. lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
 autowrap_mode = 2
 
-[node name="Timer" type="Timer" parent="." unique_id=436096070]
-one_shot = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="DialogBox" method="_on_timer_timeout"]

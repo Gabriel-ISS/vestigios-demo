@@ -172,12 +172,15 @@ centered = false
 offset = Vector2(-64.45, -129.375)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=42083914]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="Candle" parent="." unique_id=371618409 node_paths=PackedStringArray("dead_screen") instance=ExtResource("2_xys2r")]
 position = Vector2(20, -84)
 dead_screen = NodePath("../DeadScreen")
 
 [node name="DeadScreen" type="CanvasLayer" parent="." unique_id=1548642180]
+layer = 10
 visible = false
 
 [node name="TextureRect" type="TextureRect" parent="DeadScreen" unique_id=1456335824]
@@ -204,9 +207,5 @@ text = "Back to menu"
 
 [node name="Dialog" parent="." unique_id=317613777 instance=ExtResource("5_aiqs3")]
 visible = false
-offset_left = 39.0
-offset_top = -141.0
-offset_right = 249.0
-offset_bottom = -66.0
 
 [connection signal="pressed" from="DeadScreen/CenterContainer/BackToMenu" to="." method="_on_back_to_menu_pressed"]

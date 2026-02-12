@@ -3,7 +3,7 @@ class_name Character extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var dead_screen: CanvasLayer = $DeadScreen
 @onready var flashlight: PointLight2D = $Candle
-@onready var dialog: Dialog = $Dialog 
+@onready var dialog: Dialog = $Dialog
 
 @export_category('Dependencies')
 @export var speed = 400

@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ckw5y6pxtex4y" path="res://assets/terrain/rocks.webp" id="4_dga24"]
 [ext_resource type="Texture2D" uid="uid://dkq211vhnlw3a" path="res://assets/terrain/scrub.png" id="5_qxy0u"]
 [ext_resource type="Texture2D" uid="uid://cbef0w7a1awbj" path="res://assets/terrain/scrub_wall.webp" id="6_excbq"]
+[ext_resource type="PackedScene" uid="uid://b3hrw75sbhmls" path="res://scenes/ui/screens/pause.tscn" id="7_oc4kc"]
+[ext_resource type="Texture2D" uid="uid://q3t3olvykck4" path="res://assets/items/Gemini_Generated_Image_d65xdwd65xdwd65x-removebg-preview.png" id="7_s8va5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bq26l"]
 texture = ExtResource("3_s8va5")
@@ -128,10 +130,8 @@ physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_k5pu3")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k5pu3"]
-load_path = "res://.godot/imported/cless_closed.webp-c7f4e9bf83c23776d242bfadada67e63.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iqu8w"]
-load_path = "res://.godot/imported/key.webp-b86129bbcaa648009a64c250fa255bcb.ctex"
 
 [node name="Level1" type="Node2D" unique_id=580360461]
 y_sort_enabled = true
@@ -187,3 +187,27 @@ texture = SubResource("CompressedTexture2D_k5pu3")
 position = Vector2(1503.0001, -862)
 scale = Vector2(0.06133625, 0.06407448)
 texture = SubResource("CompressedTexture2D_iqu8w")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=97212503]
+
+[node name="pausebutton" type="TextureButton" parent="CanvasLayer" unique_id=1869865045]
+custom_minimum_size = Vector2(40, 40)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -109.0
+offset_bottom = 106.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+action_mode = 0
+texture_normal = ExtResource("7_s8va5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="pause" parent="CanvasLayer" unique_id=137087466 instance=ExtResource("7_oc4kc")]
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 6.0
+offset_bottom = 1.0
+
+[connection signal="pressed" from="CanvasLayer/pausebutton" to="CanvasLayer/pause" method="_on_pausebutton_pressed"]

@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://csnas426qsaaf" path="res://assets/covers/credits.jpg" id="1_fihsp"]
 [ext_resource type="Script" uid="uid://cptiioy621lws" path="res://scenes/ui/screens/credits.gd" id="1_klj0w"]
+[ext_resource type="AudioStream" uid="uid://0cq5d715p78s" path="res://assets/ost/Viento_02.ogg" id="2_b2rft"]
+[ext_resource type="AudioStream" uid="uid://4x53gtxdnqu3" path="res://assets/ost/Tecla.ogg" id="3_ti5xr"]
 
 [node name="Credits" type="Control" unique_id=1515655817]
 layout_mode = 3
@@ -11,6 +13,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_klj0w")
+
+[node name="creditsound" type="AudioStreamPlayer" parent="." unique_id=1386022492]
+stream = ExtResource("2_b2rft")
+autoplay = true
+parameters/looping = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1286888813]
 layout_mode = 1
@@ -30,5 +37,8 @@ offset_top = 11.0
 offset_right = 62.0
 offset_bottom = 42.0
 text = "BACK"
+
+[node name="buttonsound" type="AudioStreamPlayer" parent="." unique_id=2037309657]
+stream = ExtResource("3_ti5xr")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

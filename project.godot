@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Vestigios"
-run/main_scene="uid://cvr2ci2m7abrj"
+run/main_scene="uid://deed52ks6bn0s"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [dotnet]

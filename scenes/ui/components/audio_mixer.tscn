@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ptmwlkdls08n"]
+
+[ext_resource type="Script" uid="uid://17dtkogrx0ns" path="res://scenes/ui/components/audio_mixer.gd" id="1_galfi"]
+
+[node name="AudioMixer" type="Node" unique_id=1695524544]
+script = ExtResource("1_galfi")
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="." unique_id=19468451]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1084013574]

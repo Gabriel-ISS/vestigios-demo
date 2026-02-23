@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://i7jrp2r3snfs"]
+
+[ext_resource type="Script" uid="uid://dciaxreoodq71" path="res://scenes/ui/triggers/comic_trigger.gd" id="1_8jhdf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_shpdi"]
+
+[node name="ComicTrigger" type="Area2D" unique_id=1142156924]
+script = ExtResource("1_8jhdf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1344151642]
+shape = SubResource("CircleShape2D_shpdi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

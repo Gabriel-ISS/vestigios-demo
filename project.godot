@@ -23,6 +23,16 @@ project/assembly_name="Vestigios"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://assets/": "purple",
+"res://builds/": "gray",
+"res://resources/": "green",
+"res://scenes/": "yellow"
+}
+
 [input]
 
 up={

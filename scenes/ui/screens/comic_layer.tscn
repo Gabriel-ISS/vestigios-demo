@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://d2fugr86t6eqw"]
+
+[ext_resource type="Script" uid="uid://bgip0bvvjq58o" path="res://scenes/ui/screens/comic_layer.gd" id="1_n8h67"]
+[ext_resource type="PackedScene" uid="uid://ptmwlkdls08n" path="res://scenes/ui/components/audio_mixer.tscn" id="2_ib2vf"]
+
+[sub_resource type="Animation" id="Animation_n8h67"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CurrentPage:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cc54l"]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_brgxk"]
+resource_name = "show_first"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CurrentPage:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.001, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nnmfw"]
+resource_name = "switch_page"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CurrentPage:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NextPage:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cc54l"]
+_data = {
+&"RESET": SubResource("Animation_n8h67"),
+&"hide": SubResource("Animation_cc54l"),
+&"show_first": SubResource("Animation_brgxk"),
+&"switch_page": SubResource("Animation_nnmfw")
+}
+
+[node name="ComicLayer" type="CanvasLayer" unique_id=425893281]
+layer = 10
+script = ExtResource("1_n8h67")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1646072032]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1071911654]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CurrentPage" type="TextureRect" parent="." unique_id=705007023]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NextPage" type="TextureRect" parent="." unique_id=139137426]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1635422748]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="NextOrClose" type="Button" parent="MarginContainer" unique_id=315560797]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Next"
+
+[node name="BackgroundAudioMixer" parent="." unique_id=1695524544 instance=ExtResource("2_ib2vf")]
+
+[node name="InitialSfxMixer" parent="." unique_id=2062095506 instance=ExtResource("2_ib2vf")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1351012750]
+libraries/ = SubResource("AnimationLibrary_cc54l")
+
+[connection signal="pressed" from="MarginContainer/NextOrClose" to="." method="_on_next_or_close_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

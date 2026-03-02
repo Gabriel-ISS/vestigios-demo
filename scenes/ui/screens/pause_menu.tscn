@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://b3hrw75sbhmls"]
+[gd_scene format=3 uid="uid://dpcmrj23a06uk"]
 
 [ext_resource type="Script" uid="uid://let2cymie1mc" path="res://scenes/ui/screens/pause_menu.gd" id="1_2xasb"]
 [ext_resource type="Texture2D" uid="uid://q3t3olvykck4" path="res://assets/items/pause_icon.png" id="2_a63lh"]
 [ext_resource type="FontFile" uid="uid://dyw0fu3dx5u67" path="res://assets/fonts/NightsideDemoRegular.ttf" id="2_ea0c3"]
+[ext_resource type="PackedScene" uid="uid://cvr2ci2m7abrj" path="res://scenes/ui/screens/main_menu.tscn" id="2_m446d"]
 [ext_resource type="AudioStream" uid="uid://4x53gtxdnqu3" path="res://assets/ost/Tecla.ogg" id="2_mftd0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ea0c3"]
@@ -23,19 +24,15 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjygo"]
 
-[node name="pause" type="Control" unique_id=137087466]
+[node name="PauseMenu" type="CanvasLayer" unique_id=1783763389]
 process_mode = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_2xasb")
+main_menu_scene = ExtResource("2_m446d")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=926356994]
+[node name="ButtonSound" type="AudioStreamPlayer" parent="." unique_id=1563703593]
+stream = ExtResource("2_mftd0")
 
-[node name="pausebutton" type="TextureButton" parent="CanvasLayer" unique_id=2083918489]
+[node name="PauseBtn" type="TextureButton" parent="." unique_id=2083918489]
 custom_minimum_size = Vector2(40, 40)
 anchors_preset = 1
 anchor_left = 1.0
@@ -49,15 +46,17 @@ texture_normal = ExtResource("2_a63lh")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Panel" type="Panel" parent="." unique_id=536946973]
-layout_mode = 1
+[node name="MenuContainer" type="PanelContainer" parent="." unique_id=1107314560]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=1944998783]
+[node name="Background" type="Panel" parent="MenuContainer" unique_id=536946973]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MenuContainer/Background" unique_id=1944998783]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,25 +69,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.09411765, 0.09411765, 0.09411765, 0.4)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=653839022]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -133.5
-offset_top = -112.0
-offset_right = 133.5
-offset_bottom = 112.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ButtonsContainer" type="VBoxContainer" parent="MenuContainer" unique_id=653839022]
+layout_mode = 2
 alignment = 1
 
-[node name="buttonsound" type="AudioStreamPlayer" parent="VBoxContainer" unique_id=1563703593]
-stream = ExtResource("2_mftd0")
-
-[node name="resume" type="Button" parent="VBoxContainer" unique_id=2078689154]
+[node name="ResumeBtn" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=2078689154]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -101,7 +86,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_tqo6c")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_a63lh")
 text = "RESUME"
 
-[node name="main_menu" type="Button" parent="VBoxContainer" unique_id=1136210272]
+[node name="MainMenuBtn" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=1136210272]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.65566003, 0.10734648, 0.233307, 1)
 theme_override_fonts/font = ExtResource("2_ea0c3")
@@ -112,7 +97,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_3xaq1")
 text = "MAIN MENU
 "
 
-[node name="exit" type="Button" parent="VBoxContainer" unique_id=1409777245]
+[node name="ExitBtn" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=1409777245]
 layout_direction = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.65566003, 0.10734648, 0.233307, 1)
@@ -123,8 +108,3 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_88ux8")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_sjygo")
 text = "EXIT
 "
-
-[connection signal="pressed" from="CanvasLayer/pausebutton" to="." method="_on_pausebutton_pressed"]
-[connection signal="pressed" from="VBoxContainer/resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="VBoxContainer/main_menu" to="." method="_on_main_menu_pressed"]
-[connection signal="pressed" from="VBoxContainer/exit" to="." method="_on_exit_pressed"]

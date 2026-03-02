@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Vestigios"
-run/main_scene="uid://cvr2ci2m7abrj"
+run/main_scene="uid://deed52ks6bn0s"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [dotnet]
@@ -22,6 +22,16 @@ project/assembly_name="Vestigios"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://assets/": "purple",
+"res://builds/": "gray",
+"res://resources/": "green",
+"res://scenes/": "yellow"
+}
 
 [input]
 

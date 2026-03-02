@@ -159,7 +159,7 @@ offset_left = Vector2(-24, -83)
 offset_right = Vector2(20, -84)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=596002896]
-position = Vector2(-1, -11)
+position = Vector2(-1, -18)
 shape = SubResource("CircleShape2D_fsawu")
 debug_color = Color(0, 0.44705883, 0.52156866, 1)
 metadata/_edit_group_ = true

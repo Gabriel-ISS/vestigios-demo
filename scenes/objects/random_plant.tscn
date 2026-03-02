@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://t8ori3mq47qj"]
+
+[ext_resource type="Script" uid="uid://dkgtqv01osvia" path="res://scenes/objects/random_plant.gd" id="1_dk4m1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_efsrh"]
+radius = 16.124516
+
+[node name="RandomPlant" type="StaticBody2D" unique_id=606354908]
+script = ExtResource("1_dk4m1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=155955878]
+shape = SubResource("CircleShape2D_efsrh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=49253208]

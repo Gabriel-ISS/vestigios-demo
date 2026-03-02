@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ComicPage" format=3 uid="uid://chf3b3d6nwowk"]
+
+[ext_resource type="Script" uid="uid://c6qupwhuf5cwv" path="res://resources/base/comic_page.gd" id="1_ky7oi"]
+[ext_resource type="AudioStream" uid="uid://bk6toxb03a1kd" path="res://assets/sounds/OST/tension_01.ogg" id="1_vx3fa"]
+[ext_resource type="Texture2D" uid="uid://c4j5gvf6cypal" path="res://assets/covers/menu_bg.webp" id="2_csurt"]
+[ext_resource type="AudioStream" uid="uid://0nrgufsq6a0j" path="res://assets/sounds/SFX/cicada.ogg" id="3_fslk5"]
+
+[resource]
+script = ExtResource("1_ky7oi")
+image = ExtResource("2_csurt")
+initial_sound = ExtResource("3_fslk5")
+background_sound = ExtResource("1_vx3fa")
+metadata/_custom_type_script = "uid://c6qupwhuf5cwv"

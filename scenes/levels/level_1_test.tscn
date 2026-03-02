@@ -1,16 +1,16 @@
-[gd_scene format=4 uid="uid://deed52ks6bn0s"]
+[gd_scene format=4 uid="uid://cf40wc1ihhgu3"]
 
-[ext_resource type="PackedScene" uid="uid://dklbpwme4d41c" path="res://scenes/objects/tree.tscn" id="1_sk5k4"]
-[ext_resource type="PackedScene" uid="uid://dc15hjr6tl4nd" path="res://scenes/objects/detective.tscn" id="2_oc4kc"]
-[ext_resource type="Texture2D" uid="uid://b30quc7exb126" path="res://assets/terrain/tileset.png" id="3_s8va5"]
-[ext_resource type="Texture2D" uid="uid://ckw5y6pxtex4y" path="res://assets/terrain/rocks.webp" id="4_dga24"]
-[ext_resource type="Texture2D" uid="uid://dkq211vhnlw3a" path="res://assets/terrain/scrub.png" id="5_qxy0u"]
-[ext_resource type="Texture2D" uid="uid://cbef0w7a1awbj" path="res://assets/terrain/scrub_wall.webp" id="6_excbq"]
-[ext_resource type="PackedScene" uid="uid://b3hrw75sbhmls" path="res://scenes/ui/screens/pause_menu.tscn" id="7_oc4kc"]
-[ext_resource type="Texture2D" uid="uid://q3t3olvykck4" path="res://assets/items/pause_icon.png" id="7_s8va5"]
+[ext_resource type="PackedScene" uid="uid://dklbpwme4d41c" path="res://scenes/objects/tree.tscn" id="1_fc2t5"]
+[ext_resource type="PackedScene" uid="uid://dc15hjr6tl4nd" path="res://scenes/objects/detective.tscn" id="2_5r0hd"]
+[ext_resource type="Texture2D" uid="uid://b30quc7exb126" path="res://assets/terrain/tileset.png" id="3_kx7su"]
+[ext_resource type="Texture2D" uid="uid://ckw5y6pxtex4y" path="res://assets/terrain/rocks.webp" id="4_remwa"]
+[ext_resource type="Texture2D" uid="uid://dkq211vhnlw3a" path="res://assets/terrain/scrub.png" id="5_n2xd7"]
+[ext_resource type="Texture2D" uid="uid://cbef0w7a1awbj" path="res://assets/terrain/scrub_wall.webp" id="6_70c5l"]
+[ext_resource type="Texture2D" uid="uid://q3t3olvykck4" path="res://assets/items/pause_icon.png" id="7_w333h"]
+[ext_resource type="PackedScene" uid="uid://b3hrw75sbhmls" path="res://scenes/ui/screens/pause_menu.tscn" id="8_xj74x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bq26l"]
-texture = ExtResource("3_s8va5")
+texture = ExtResource("3_kx7su")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -92,7 +92,7 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/1 = SubResource("TileSetAtlasSource_bq26l")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq47o"]
-texture = ExtResource("4_dga24")
+texture = ExtResource("4_remwa")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -106,7 +106,7 @@ sources/0 = SubResource("TileSetAtlasSource_rq47o")
 tile_proxies/coords_level = [[1, Vector2i(0, 0)], [3, Vector2i(0, 0)], [2, Vector2i(0, 0)], [3, Vector2i(1, 0)], [20, Vector2i(0, 0)], [30, Vector2i(0, 0)], [21, Vector2i(0, 0)], [30, Vector2i(1, 0)], [22, Vector2i(0, 0)], [30, Vector2i(2, 0)], [23, Vector2i(0, 0)], [30, Vector2i(3, 0)], [24, Vector2i(0, 0)], [30, Vector2i(4, 0)], [25, Vector2i(0, 0)], [30, Vector2i(0, 1)], [26, Vector2i(0, 0)], [30, Vector2i(1, 1)], [27, Vector2i(0, 0)], [30, Vector2i(2, 1)], [28, Vector2i(0, 0)], [30, Vector2i(3, 1)], [29, Vector2i(0, 0)], [30, Vector2i(4, 1)]]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fkrx8"]
-texture = ExtResource("5_qxy0u")
+texture = ExtResource("5_n2xd7")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -117,7 +117,7 @@ sources/2 = SubResource("TileSetAtlasSource_fkrx8")
 tile_proxies/coords_level = [[0, Vector2i(0, 0)], [2, Vector2i(0, 0)], [1, Vector2i(0, 0)], [2, Vector2i(1, 0)]]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k5pu3"]
-texture = ExtResource("6_excbq")
+texture = ExtResource("6_70c5l")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
@@ -136,20 +136,20 @@ sources/3 = SubResource("TileSetAtlasSource_k5pu3")
 [node name="Level1" type="Node2D" unique_id=580360461]
 y_sort_enabled = true
 
-[node name="Tree" parent="." unique_id=606354908 instance=ExtResource("1_sk5k4")]
+[node name="Tree" parent="." unique_id=606354908 instance=ExtResource("1_fc2t5")]
 position = Vector2(-380, -886)
 version = 1
 
-[node name="Tree2" parent="." unique_id=13885964 instance=ExtResource("1_sk5k4")]
+[node name="Tree2" parent="." unique_id=13885964 instance=ExtResource("1_fc2t5")]
 position = Vector2(-161, -712)
 
-[node name="Tree3" parent="." unique_id=1098404827 instance=ExtResource("1_sk5k4")]
+[node name="Tree3" parent="." unique_id=1098404827 instance=ExtResource("1_fc2t5")]
 position = Vector2(229, -1275)
 
-[node name="Tree4" parent="." unique_id=203626792 instance=ExtResource("1_sk5k4")]
+[node name="Tree4" parent="." unique_id=203626792 instance=ExtResource("1_fc2t5")]
 position = Vector2(-100, -1164)
 
-[node name="Detective" parent="." unique_id=239483670 instance=ExtResource("2_oc4kc")]
+[node name="Detective" parent="." unique_id=239483670 instance=ExtResource("2_5r0hd")]
 y_sort_enabled = true
 position = Vector2(16, 71)
 
@@ -200,11 +200,11 @@ offset_bottom = 106.0
 grow_horizontal = 0
 size_flags_horizontal = 4
 action_mode = 0
-texture_normal = ExtResource("7_s8va5")
+texture_normal = ExtResource("7_w333h")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="pause" parent="CanvasLayer" unique_id=137087466 instance=ExtResource("7_oc4kc")]
+[node name="pause" parent="CanvasLayer" unique_id=137087466 instance=ExtResource("8_xj74x")]
 offset_left = 6.0
 offset_top = 1.0
 offset_right = 6.0

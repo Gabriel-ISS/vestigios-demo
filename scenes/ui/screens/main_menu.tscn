@@ -3,22 +3,36 @@
 [ext_resource type="Script" uid="uid://ke4oqirh8m43" path="res://scenes/ui/screens/main_menu.gd" id="1_3ap38"]
 [ext_resource type="Texture2D" uid="uid://c4j5gvf6cypal" path="res://assets/covers/menu_bg.webp" id="2_xqk8k"]
 [ext_resource type="FontFile" uid="uid://dyw0fu3dx5u67" path="res://assets/fonts/NightsideDemoRegular.ttf" id="3_xqk8k"]
+[ext_resource type="AudioStream" uid="uid://4x53gtxdnqu3" path="res://assets/ost/Tecla.ogg" id="4_sjck8"]
+[ext_resource type="AudioStream" uid="uid://c5aa8wr5wo031" path="res://assets/ost/Musica_Menu.ogg" id="5_tc0aq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqk8k"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 draw_center = false
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_taxko"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxxgq"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j84ir"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tc0aq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb022"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6i4kq"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqb7d"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjck8"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7uh0"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_68y0e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu4s6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -78,13 +92,19 @@ size_flags_vertical = 8
 [node name="Options" type="VBoxContainer" parent="OptionsPadding" unique_id=164016252]
 layout_mode = 2
 
+[node name="buttonsound" type="AudioStreamPlayer" parent="OptionsPadding/Options" unique_id=300980043]
+stream = ExtResource("4_sjck8")
+
 [node name="Play" type="Button" parent="OptionsPadding/Options" unique_id=938656976]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.53333336, 0.09411765, 0.22352941, 1)
 theme_override_fonts/font = ExtResource("3_xqk8k")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_xqk8k")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_taxko")
 theme_override_styles/hover = SubResource("StyleBoxFlat_uxxgq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_j84ir")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tc0aq")
 text = "PLAY"
 
 [node name="Credits" type="Button" parent="OptionsPadding/Options" unique_id=2073443549]
@@ -93,7 +113,9 @@ theme_override_colors/font_hover_color = Color(0.5254902, 0.09411765, 0.22352941
 theme_override_fonts/font = ExtResource("3_xqk8k")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_qb022")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6i4kq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oqb7d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_sjck8")
 text = "CREDITS"
 
 [node name="Exit" type="Button" parent="OptionsPadding/Options" unique_id=1302326350]
@@ -102,8 +124,14 @@ theme_override_colors/font_hover_color = Color(0.57254905, 0.13333334, 0.2666666
 theme_override_fonts/font = ExtResource("3_xqk8k")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_m7uh0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_68y0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vu4s6")
 text = "EXIT"
+
+[node name="menu_ost" type="AudioStreamPlayer" parent="." unique_id=114987909]
+stream = ExtResource("5_tc0aq")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="OptionsPadding/Options/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="OptionsPadding/Options/Credits" to="." method="_on_credits_pressed"]
